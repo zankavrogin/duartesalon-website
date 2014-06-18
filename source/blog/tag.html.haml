@@ -1,0 +1,18 @@
+---
+title: Blog
+page_title: Blog
+author: The Hybrid Group
+layout: blog
+---
+- content_for(:subtitle, "Articles tagged with “#{tagname}”")
+
+.blog-content
+	- page_articles.each_with_index do |article, i|
+		%article
+			%h2= link_to article.title, article
+			%time{:datetime => article.date}= article.date.strftime('%A, %b. %e %Y')
+			= article.summary(250)
+			= link_to 'Read more', article, {:class => 'blog-readmore'}
+
+.blog-sidebar
+	= partial "layouts/elements/blog-sidebar"

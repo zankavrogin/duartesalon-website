@@ -1,0 +1,10 @@
+---
+title: GoGaRuCo
+date: 2013-09-21 00:00 UTC
+author: Ron Evans
+tags:
+---
+
+We've written about the Artoo team being at the always fantasic Golden Gate Ruby Conference. Being in San Francisco was great, and we were truly inpired by the community here. 
+
+You can read what we have to say on the Artoo site in the post ["GoGaRuCo"](http://artoo.io/blog/2013/09/21/gogaruco/).

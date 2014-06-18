@@ -1,0 +1,10 @@
+.center_pic_div
+  #galleria
+    = image_tag 'services.png'
+    = image_tag 'hairspa.png'
+    = image_tag 'gallery.png'
+:javascript
+  $(document).ready(function(){
+    Galleria.loadTheme('assets/galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('#galleria');
+  });

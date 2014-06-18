@@ -1,0 +1,206 @@
+
+.background_layout {
+  width: 592px;
+  height: 146px;
+  position: absolute;
+  left: 425px;
+  top: 71px;
+  z-index: -1;
+  }
+
+#comment {
+  text-align: center;
+  }
+
+.coming_soon {
+  padding: 93px 1px 1px 289px;
+  font-size: 50px;
+  margin-bottom: 0px;
+  }
+
+.coming_soon_phone {
+  padding: 0px 0px 0px 288px;
+  font-size: 50px;
+  margin-top: 0px;
+  }
+
+.first_schedule_div {
+  float: left;
+  margin-right: 42px;
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 15px;
+  }
+
+.first_time_div {
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 15px;
+  }
+
+.first_schedule_div_booking {
+  float: left;
+  margin-right: 42px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+  color: white;
+  }
+
+.first_time_div_booking {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+  color: white;
+  }
+
+.form_div {
+  height: 347px;
+  width: 196px;
+  margin: 239px 0px 0px 151px;
+  padding: 1px 30px 20px 30px;
+  background-color: #3D4040;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  }
+
+.form_div h1 {
+  font-size: 16px;
+  margin-top: 21px;
+  font-weight: 100;
+  margin-bottom: 24px;
+  }
+
+.form_div p {
+  margin: 0px;
+}
+
+#Landing_body_div {
+  margin: 204px 1px 0px 245px;
+  height: 450px;
+  width: 700px;
+  }
+#location_div_first {
+  margin: 0px 38px 0px 148px;
+  }
+
+#location_div_second {
+  margin-left: 16px;
+}
+
+#location_div_first, #location_div_second  {
+  width: 237px;
+  height: 222px;
+  float: left;
+  }
+
+#location_div_first h1, #location_div_second h1 {
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 12px;
+  margin: 4px 0 0 0;
+  padding: 0;
+  }
+
+#location_div_first p, #location_div_second p {
+  font-size: 15px;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  }
+
+#my_form {
+  text-align: right;
+  margin-right: 31px;
+}
+
+#my_form p {
+  margin: 0px;
+}
+
+.second_time_div {
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 15px;
+  }
+
+.second_schedule_div {
+  float: left;
+  margin-right: 81px;
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 15px;
+  }
+
+.second_time_div_booking {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+  color: white;
+  }
+
+.second_schedule_div_booking {
+  float: left;
+  margin-right: 69px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+  color: white
+  }
+
+
+.Sidebar_menu {
+  float: left;
+  text-align: right;
+  margin: 15px 26px 1px 0px;
+  font-family:'Comfortaa', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 25px;
+  }
+
+.Sidebar_menu ul li {
+  list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+#what_we_do {
+  margin: 0px 20px 0px 151px;
+  }
+
+#who_we_are {
+  margin-left: 16px;
+}
+
+#who_we_are, #what_we_do  {
+  width: 237px;
+  height: 222px;
+  float: left;
+  }
+
+#who_we_are h1, #what_we_do h1 {
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 25px;
+  color: black;
+  font-size: 12px;
+  margin: 4px 0 0 0;
+  padding: 0;
+  }
+
+#who_we_are p, #what_we_do p {
+  font-size: 12px;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  }
