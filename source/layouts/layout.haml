@@ -10,13 +10,13 @@
   =javascript_include_tag 'galleria/galleria-1.2.7.min.js'
   =csrf_meta_tags
 
-%body#Landing_body_div
-
-  .background_layout
-    %img
-    =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
-
-  = partial "layouts/elements/sidebar"
-
-  =yield
+%body 
+  .wrap
+    .header
+      %img
+      =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
+    .content
+      = partial "layouts/elements/sidebar"
+      .container
+        =yield
 

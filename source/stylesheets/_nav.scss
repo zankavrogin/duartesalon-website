@@ -1,0 +1,42 @@
+nav{
+	@include span-columns(2);
+	float: left;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+	position: relative;
+	padding: 0 15px;
+	top: 15px;
+	@media #{$mq-tablet-mobile}{
+		@include span-columns(12);
+		top: 0;
+	}
+}
+ul{
+	padding-left: 0;
+}
+
+li{
+	display: inline-block;
+	list-style: none;
+	padding-left: 15px;
+	width: 120px;
+	&:hover{
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		display: block;
+		padding-right: 30px;
+	}
+	@media #{$mq-tablet-mobile}{
+		width: 50%;
+		float: left;
+		padding-left: 0;
+		a{
+			font-size: 18px;
+			margin: 10px 5px;
+		}
+	}
+}
