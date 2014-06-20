@@ -4,6 +4,8 @@ ruby "1.9.3"
 
 gem "middleman", "~> 3.2.2" 
 gem 'rake' 
+gem 'rack-contrib'
+gem "puma"
 gem 'bourbon'
 gem "middleman-neat"
 gem "guard"

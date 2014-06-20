@@ -8,17 +8,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.layout = "layouts/blog"
-  blog.tag_template = "blog/tag.html"
-  blog.sources = "articles/{year}-{month}-{day}-{title}.html"
-
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/{num}"
-end
 
 configure :build do
 end
@@ -33,8 +22,5 @@ helpers do
 
     properties
   end
-
-  def copyright_years
-    "2010 - #{Date.today.year}"
-  end
+ 
 end
