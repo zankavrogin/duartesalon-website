@@ -7,7 +7,10 @@ nav{
 	position: relative;
 	padding: 0 15px;
 	top: 15px;
-	@media #{$mq-tablet-mobile}{
+	@media #{$mq-desktop}{
+		@include omega; 
+	}
+	@media #{$mq-mobile}{
 		@include span-columns(12);
 		top: 0;
 	}
@@ -21,6 +24,7 @@ li{
 	list-style: none;
 	padding-left: 15px;
 	width: 120px;
+	text-align: center;
 	&:hover{
 		background-color: rgba(0, 0, 0, 0.05);
 	}
@@ -30,10 +34,12 @@ li{
 		display: block;
 		padding-right: 30px;
 	}
-	@media #{$mq-tablet-mobile}{
-		width: 50%;
+	@media #{$mq-mobile}{
+		width: 46%;
 		float: left;
-		padding-left: 0;
+		margin-left: 10px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
 		a{
 			font-size: 18px;
 			margin: 10px 5px;

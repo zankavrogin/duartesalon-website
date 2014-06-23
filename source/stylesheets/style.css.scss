@@ -10,10 +10,10 @@
 
 .header{
 	@include row(); 
-	@include shift(1);
+	@include shift(2);
 	margin-top:50px;
 	
-	@media #{$mq-tablet-mobile}{
+	@media #{$mq-mobile}{
 		@include shift(0);
 		img{
 			width: 100%;
@@ -21,56 +21,56 @@
 	}
 }
 
- 
-
 .content{
 	
 	@include row();
 	@include span-columns(12);
 }
 .container{ 
-	@include span-columns(9.5);
+	@include span-columns(10);
 	float: left;
 	position: relative;
 	font-family: 'Comfortaa', sans-serif;
 	font-size: 14px;
-	padding: 14px 0px 0px 0px;
-	p{
-		margin-left: 25px;
-	}
+	padding: 14px 0px 0px 25px;
 	
-	@media #{$mq-tablet-mobile}{
+	@media #{$mq-mobile}{
 		@include span-columns(12);
 		font-size: 18px;
-		padding: 0 15px;
-		p{
-			margin-left: 0;
-		}
+		padding: 0 15px; 
 	}
 }
 .image-container{
 	float: left;
-	margin-right: 50px;
+	margin-right: 25px;
 	width: 54%;
+	padding-top: 18px;
 	img{
 		position: relative;
-		width: 100%;
-		left: 25px;
+		width: 100%; 
 	}
 	@media #{$mq-tablet}{
 		float: none; 
 		width: 93%;
 	}
-	@media #{$mq-tablet-mobile}{
+	@media #{$mq-mobile}{
 		margin: 15px 0;
 		width: 100%;
-
-		img{
-			left:0;
-		}
+ 
 	}
 }
-
+.media-container{
+	float: left;
+}
+.text-wrap{
+	@include span-columns(3);
+	@include shift(1);
+	margin-left: 15px;
+	@media #{$mq-tablet-mobile}{
+		@include span-columns(12);
+		@include shift(0);
+	}
+}
 .p_index{
 	font-family: 'Comfortaa', sans-serif;
 	position: relative;

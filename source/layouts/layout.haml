@@ -5,15 +5,11 @@
   %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :title => "style", :type => "text/css"}
   %link{:href => "http://fonts.googleapis.com/css?family=Comfortaa:300", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"}
-  =stylesheet_link_tag 'application'
-  =javascript_include_tag 'application'
-  =javascript_include_tag 'galleria/galleria-1.2.7.min.js'
   =csrf_meta_tags
 
 %body 
   .wrap
     .header
-      %img
       =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
     .content
       = partial "layouts/elements/sidebar"
