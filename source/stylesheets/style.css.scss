@@ -3,6 +3,7 @@
 @import "variables";
 @import "nav"; 
 
+
 .wrap{
   @include outer-container;
   //max-width: 80em;
@@ -81,10 +82,23 @@
 	height: 322px;
 	padding: 14px 1px 1px 1px;
 }
+h3{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 125px;
+}
+a{
+	color: black;
+}
+.what-we-do{
+	h3{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		width: 75%;
+	}
+}
 .services{
 	float: left;
+	margin-top: -14px;
 }
 .prices{
-	margin-top: 37px;
 	text-align: center;
 }

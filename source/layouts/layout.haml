@@ -10,7 +10,8 @@
 %body 
   .wrap
     .header
-      =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
+      %a{:href => '/'}
+        =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
     .content
       = partial "layouts/elements/sidebar"
       .container
