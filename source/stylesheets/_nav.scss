@@ -7,43 +7,63 @@ nav{
 	position: relative;
 	padding: 0 15px;
 	top: 15px;
-	@media #{$mq-desktop}{
-		@include omega; 
-	}
 	@media #{$mq-mobile}{
 		@include span-columns(12);
 		top: 0;
 	}
 }
-ul.nav{
+.nav{
 	padding-left: 0;
 
-li{
-	display: inline-block;
-	list-style: none;
-	padding-left: 15px;
-	width: 140px;
-	text-align: center;
-	white-space: nowrap;
-	&:hover{
-		background-color: rgba(0, 0, 0, 0.05);
-	}
-	a{
-		text-decoration: none;
-		color: black;
-		display: block;
-		padding-right: 30px;
-	}
-	@media #{$mq-mobile}{
-		width: 46%;
-		float: left;
-		margin-left: 10px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
+	li{
+		display: inline-block;
+		list-style: none;
+		padding-left: 15px;
+		width: 150px;
+		text-align: center;
+		white-space: nowrap;
+		&:hover{
+			background-color: rgba(0, 0, 0, 0.05);
+		}
 		a{
-			font-size: 18px;
-			margin: 10px 5px;
+			text-decoration: none;
+			color: black;
+			display: block;
+			padding-right: 30px;
+		}
+		@media #{$mq-mobile}{
+			width: 46%;
+			float: left;
+			margin-left: 10px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+			a{
+				font-size: 18px;
+				margin: 10px 5px;
+			}
 		}
 	}
 }
+ul.sub-nav{
+		@extend .nav;
+		padding-left: 0;
+		text-align: center;
+		list-style: none;
+
+		li{
+			width: 24%;
+			@media #{$mq-mobile}{
+				width: 47%;
+			}
+		}
+}
+ul.treatments{
+	list-style: none;
+	
+	li{
+		margin: 5px 0;
+	}
+	li:before {
+		content: "\2666 \0020";
+	}
 }

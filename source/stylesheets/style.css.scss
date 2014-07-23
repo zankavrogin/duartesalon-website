@@ -10,7 +10,6 @@
   @include outer-container;
   //max-width: 80em;
 }
-
 .header{
 	@include row(); 
 	@include shift(2);
@@ -23,9 +22,7 @@
 		}
 	}
 }
-
 .content{
-	
 	@include row();
 	@include span-columns(12);
 }
@@ -65,7 +62,6 @@
  
 	}
 }
-
 .image-container-small{
 	@extend .image-container;
 	text-align: center;
@@ -79,9 +75,9 @@
 		}
 	}
 }
-
 .media-container{
 	float: left;
+	margin-top: 15px;
 }
 .text-wrap{
 	@include span-columns(3);
@@ -91,20 +87,6 @@
 		@include span-columns(12);
 		@include shift(0);
 	}
-}
-.p_index{
-	font-family: 'Comfortaa', sans-serif;
-	position: relative;
-	right: 158px;
-	top: 0px;
-	font-size: 14px;
-	z-index: 0;
-	height: 322px;
-	padding: 14px 1px 1px 1px;
-}
-h3{
-	//border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	//width: 150px;
 }
 a{
 	color: black;
@@ -117,34 +99,36 @@ h3.underline{
 	float: left;
 	margin-top: -14px;
 }
+.services-container{
+	@extend .left;
+}
+
 .prices{
 	text-align: center;
 }
-
-ul.treatments{
-	li{
-		display: block;
-		list-style-type: diamond;
-	}
-}
-header.left{
+.left{
 	@media #{$mq-desktop}{
 		width: 55%;
 		float: left;
 	}
 }
-header.right, .services-container{
+.right{
 	@media #{$mq-desktop}{
 		float: right;
 		width: 42%;
 	}
 }
-
 .underline, .underline-extended{
 	width: 225px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
-
-.center{
+h2.underline-extended{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	width: 300px;
+	@media #{$mq-mobile}{
+		width: 370px;
+	}
+}
+.center, .video{
 	text-align: center;
 }
