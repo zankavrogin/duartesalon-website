@@ -15,16 +15,16 @@ nav{
 		top: 0;
 	}
 }
-ul{
+ul.nav{
 	padding-left: 0;
-}
 
 li{
 	display: inline-block;
 	list-style: none;
 	padding-left: 15px;
-	width: 120px;
+	width: 140px;
 	text-align: center;
+	white-space: nowrap;
 	&:hover{
 		background-color: rgba(0, 0, 0, 0.05);
 	}
@@ -45,4 +45,5 @@ li{
 			margin: 10px 5px;
 		}
 	}
+}
 }

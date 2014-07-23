@@ -3,6 +3,8 @@
 @import "variables";
 @import "nav"; 
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 
 .wrap{
   @include outer-container;
@@ -31,7 +33,7 @@
 	@include span-columns(10);
 	float: left;
 	position: relative;
-	font-family: 'Comfortaa', sans-serif;
+	font-family:  open sans, sans-serif;
 	font-size: 14px;
 	padding: 14px 0px 0px 25px;
 	
@@ -50,6 +52,9 @@
 		position: relative;
 		width: 100%; 
 	}
+	.contact-image{
+		width: 49%;
+	}
 	@media #{$mq-tablet}{
 		float: none; 
 		width: 93%;
@@ -60,6 +65,21 @@
  
 	}
 }
+
+.image-container-small{
+	@extend .image-container;
+	text-align: center;
+
+	@media #{$mq-desktop}{
+		width: 40%;
+	}
+	img{
+		@media #{$mq-tablet-mobile}{
+			width: 80%;
+		}
+	}
+}
+
 .media-container{
 	float: left;
 }
@@ -83,22 +103,48 @@
 	padding: 14px 1px 1px 1px;
 }
 h3{
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	width: 125px;
+	//border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	//width: 150px;
 }
 a{
 	color: black;
 }
-.what-we-do{
-	h3{
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		width: 75%;
-	}
+h3.underline{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 175px;
 }
 .services{
 	float: left;
 	margin-top: -14px;
 }
 .prices{
+	text-align: center;
+}
+
+ul.treatments{
+	li{
+		display: block;
+		list-style-type: diamond;
+	}
+}
+header.left{
+	@media #{$mq-desktop}{
+		width: 55%;
+		float: left;
+	}
+}
+header.right, .services-container{
+	@media #{$mq-desktop}{
+		float: right;
+		width: 42%;
+	}
+}
+
+.underline, .underline-extended{
+	width: 225px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.center{
 	text-align: center;
 }
