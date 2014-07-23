@@ -59,11 +59,11 @@ ul.sub-nav{
 }
 ul.treatments{
 	list-style: none;
-	
+
 	li{
 		margin: 5px 0;
 	}
-	li:before {
+	> li:before {
 		content: "\2666 \0020";
 	}
 }
