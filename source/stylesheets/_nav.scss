@@ -1,11 +1,11 @@
 nav{
-	@include span-columns(2);
+	//@include span-columns(2);
 	float: left;
 	font-family: 'Comfortaa', sans-serif;
 	font-size: 14px;
 	line-height: 25px;
 	position: relative;
-	padding: 0 15px;
+	//padding: 0 15px;
 	top: 15px;
 	@media #{$mq-mobile}{
 		@include span-columns(12);
@@ -13,17 +13,16 @@ nav{
 	}
 }
 .nav{
-	padding-left: 0;
+	padding: 0;
 
 	li{
 		display: inline-block;
 		list-style: none;
-		padding-left: 15px;
-		width: 150px;
+		width: 200px;
 		text-align: center;
 		white-space: nowrap;
 		&:hover{
-			background-color: rgba(0, 0, 0, 0.05);
+			//background-color: rgba(0, 0, 0, 0.05);
 		}
 		a{
 			text-decoration: none;

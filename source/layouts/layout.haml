@@ -3,18 +3,25 @@
   %title Duarte Salon
   %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
   %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :title => "style", :type => "text/css"}
+  %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
   %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
   %script{:type => "text/javascript", :src => "javascripts/all.js"}
+  %script{:src => "/javascripts/modernizr.js"}
+  %script{:src => "/javascripts/pushy.min.js"}
+
   =csrf_meta_tags
 
 %body 
-  .wrap
-    .header
-      %a{:href => '/'}
-        =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
+  = partial "layouts/elements/sidebar"
+  #container 
+    .menu-btn &#9776; 
+    .top
+      .title
+        %h1 #{current_page.data.title}
+      .hero
+        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
     .content
-      = partial "layouts/elements/sidebar"
       .container
         =yield
 
