@@ -5,11 +5,12 @@
 
 @font-face {
   font-family: 'amazon';
-  src: url('/fonts/amazonrg.ttf')  format('truetype')
+  src: 	url('/fonts/amazonrg-webfont.woff')  format('woff'),
+  		url('/fonts/amazonrg.ttf')  format('truetype');
 }
 
 h1,h2,h3{
-	font-family: amazon;
+	font-family: amazon, Pinyon Script, open sans;
 	font-weight: 400;
 }
 
@@ -51,7 +52,7 @@ html, body{
 
 	h1{
 		margin: 0;
-		font:400 100px/80px amazon, open sans, sans serif; 
+		font:400 100px/80px amazon, Pinyon Script, open sans, sans serif; 
 		opacity: .9;
 		color: white;
 		text-decoration: none;
