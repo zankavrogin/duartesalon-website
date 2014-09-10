@@ -51,13 +51,15 @@ html, body{
 
 	h1{
 		margin: 0;
-	}
-	h1 {
 		font:400 100px/80px amazon, open sans, sans serif; 
 		opacity: .9;
 		color: white;
 		text-decoration: none;
 		padding: 0 10px;
+
+		@media #{$mq-mobile}{
+			font-size: 65px;
+		}
 	}
 
 	h1 span.black{
@@ -211,8 +213,12 @@ a{
 .index .title{
 	left: 290px;
 	top: 55px;
-}
 
+	@media #{$mq-mobile}{
+		left: 190px;
+		top: 41px;
+	}
+}
 
 .services .title {
 	left: 290px;
@@ -225,14 +231,21 @@ a{
 }
 
 .hair_institute .title{
-	left: 65%;
+	width: 62%;
+	left: 68%;
 	top: 27%;
-	white-space: nowrap;
+	@media #{$mq-mobile}{
+		top: 43%;
+	}
 }
 
 .contact_us .title{
 	left: 48%;
 	top: 23%;
+
+	@media #{$mq-mobile}{
+		top: 42%;
+	}
 }
 
 
