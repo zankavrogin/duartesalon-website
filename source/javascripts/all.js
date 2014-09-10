@@ -1,14 +1,8 @@
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+
+
+$(window).scroll(function() {
+  var background = $('.image-head');    
+  var offset = background.offset();  
+  var opacity = ( ((offset.top * 1.5) - background.height() -100) /1000 ) * -9.2;
+  $('.image-head').css('opacity', opacity );
 });

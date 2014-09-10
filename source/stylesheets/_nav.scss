@@ -1,11 +1,47 @@
+.menu-btn{
+	top: 15px;
+	left: 10px;
+	font: 400 100px/80px amazon, open sans, sans serif;
+
+	&:hover{
+		cursor: pointer;
+
+		span{
+			opacity: .9;
+		}
+	}
+	&:before{
+		
+		color: white;
+		content: "D";
+		opacity: .9;
+	}
+
+	span{
+
+		transition: .5s all;
+		font: 400 20px/20px open sans, sans serif;
+		color: white;
+		border: 1px solid white;
+		padding: 0px 6px 2px;
+		border-radius: 9px;
+		position: relative;
+		top: -36px;
+		left: 10px;
+		opacity: .0;
+
+
+	}
+	
+}
+.button-black:before{
+	color: black;
+}
 nav{
-	//@include span-columns(2);
 	float: left;
-	font-family: 'Comfortaa', sans-serif;
 	font-size: 14px;
 	line-height: 25px;
 	position: relative;
-	//padding: 0 15px;
 	top: 15px;
 	@media #{$mq-mobile}{
 		@include span-columns(12);
@@ -13,12 +49,14 @@ nav{
 	}
 }
 .nav{
+	font: 400 26px/30px amazon, serif;
 	padding: 0;
+	margin-top: 40%;
 
 	li{
 		display: inline-block;
 		list-style: none;
-		width: 200px;
+		width: 250px;
 		text-align: center;
 		white-space: nowrap;
 		&:hover{
@@ -30,21 +68,16 @@ nav{
 			display: block;
 			padding-right: 30px;
 		}
-		@media #{$mq-mobile}{
-			width: 46%;
-			float: left;
-			margin-left: 10px;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	}
+	@media #{$mq-mobile}{
+			
 
-			a{
-				font-size: 18px;
-				margin: 10px 5px;
-			}
-		}
+		margin-top: 0;
 	}
 }
 ul.sub-nav{
 		@extend .nav;
+		margin-top: 0;
 		padding-left: 0;
 		text-align: center;
 		list-style: none;

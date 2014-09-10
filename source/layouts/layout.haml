@@ -6,21 +6,25 @@
   %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
   %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
-  %script{:type => "text/javascript", :src => "javascripts/all.js"}
+  %script{:src => "javascripts/all.js"}
   %script{:src => "/javascripts/modernizr.js"}
   %script{:src => "/javascripts/pushy.min.js"}
 
   =csrf_meta_tags
 
-%body 
+%body{:class => page_classes}
   = partial "layouts/elements/sidebar"
   #container 
-    .menu-btn &#9776; 
-    .top
-      .title
-        %h1 #{current_page.data.title}
-      .hero
-        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
+    -if current_page.data.menu_button_black
+      .menu-btn.button-black
+    -else
+      .menu-btn <br><span>menu</span>
+    -if current_page.data.hero == true 
+      %div.top
+        .title
+          %h1 #{current_page.data.title}
+        .hero
+          .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
     .content
       .container
         =yield
