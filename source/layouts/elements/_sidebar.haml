@@ -1,8 +1,8 @@
 %nav
-  =image_tag 'logo.png', :alt => 'Duarte Logo', :class => 'Duarte_logo'
+  = link_to image_tag( 'logo.png'), '/', :class => 'Duarte_logo'
+
+
   %ul.nav
-    %li
-      = link_to 'Home', '/'
     %li
       = link_to 'Services', 'services'
     %li

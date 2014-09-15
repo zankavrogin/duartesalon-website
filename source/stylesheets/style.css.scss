@@ -9,6 +9,8 @@
   		url('/fonts/amazonrg.ttf')  format('truetype');
 }
 
+
+
 h1,h2,h3{
 	font-family: amazon, Pinyon Script, open sans;
 	font-weight: 400;
@@ -97,7 +99,7 @@ html, body{
 	@include span-columns(12);
 	float: left;
 	position: relative;
-	font: 400 24px/38px open sans, sans-serif;
+	font: 300 12px/18px open sans, sans-serif;
 
 	padding: 14px 0px 25px 0px;
 	
@@ -233,5 +235,63 @@ a{
 
 	@media #{$mq-mobile}{
 		top: 42%;
+	}
+}
+
+
+.demo{
+	@extend .top;
+	float: right;
+	width: 50%;
+	margin-top: 47px;
+}
+
+.demo-serve{
+	float: left;
+	width: 49%;
+
+}
+
+.services {
+	.top{
+		@extend .demo;
+	}
+	.container{
+		@extend .demo-serve;
+	}
+}
+.bio {
+	.top{
+		@extend .demo;
+		margin-top: 30px;
+	}
+	.content{
+		@extend .demo-serve;
+		padding-left: 20px;
+	}
+}
+
+a,strong{
+	font-weight: 400;
+	text-decoration: none;
+
+	&:hover{
+	text-decoration: underline;
+	}
+}
+
+.column-container{
+	@include outer-container;
+	margin-top: 30px;
+}
+
+.column{
+	@include span-columns(4);
+	padding: 0 5px;
+	@include omega;
+	height: auto;
+	overflow: hidden;
+	img{
+		width: 100%;
 	}
 }

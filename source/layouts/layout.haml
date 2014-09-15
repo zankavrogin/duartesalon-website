@@ -4,7 +4,7 @@
   %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
   %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :title => "style", :type => "text/css"}
   %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
-  %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700|Pinyon+Script", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pinyon+Script", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
   %script{:src => "javascripts/all.js"}
   %script{:src => "/javascripts/modernizr.js"}
@@ -17,6 +17,20 @@
     %div.top
       .hero
         .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
+  -if current_page.data.home == true
+    .column-container
+      .column
+        = link_to image_tag( 'bio.jpg'), '/', :class => 'Duarte_logo'
+      .column
+        = link_to image_tag( 'wind.jpg'), '/', :class => 'Duarte_logo'
+      .column
+        = link_to image_tag( 'woman.jpg'), '/', :class => 'Duarte_logo'
+      .column
+        = link_to image_tag( 'contact.jpg'), '/', :class => 'Duarte_logo'
+      .column
+        = link_to image_tag( 'salon.jpg'), '/', :class => 'Duarte_logo'
+      .column
+        = link_to image_tag( 'unknown.jpg'), '/', :class => 'Duarte_logo'
     .content
       .container
         =yield
