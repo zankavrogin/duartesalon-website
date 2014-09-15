@@ -8,23 +8,15 @@
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
   %script{:src => "javascripts/all.js"}
   %script{:src => "/javascripts/modernizr.js"}
-  %script{:src => "/javascripts/pushy.min.js"}
 
   =csrf_meta_tags
 
 %body{:class => page_classes}
   = partial "layouts/elements/sidebar"
   #container 
-    -if current_page.data.menu_button_black
-      .menu-btn.button-black
-    -else
-      .menu-btn <br><span>menu</span>
-    -if current_page.data.hero == true 
-      %div.top
-        .title
-          %h1 #{current_page.data.title}
-        .hero
-          .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
+    %div.top
+      .hero
+        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
     .content
       .container
         =yield

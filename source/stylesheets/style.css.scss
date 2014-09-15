@@ -21,23 +21,9 @@ html, body{
 	margin: 0;
 	font-family:  open sans, sans-serif;
 }
-.pushy{
-    width: 250px; /* Changed the width to 400px */
-    transition: 1s;
-}
-
-.pushy-left{
-    transform: translate3d(-400px,0,0); 
-    transition: 1s;
-}
-
-.container-push, .push-push{
-    transform: translate3d(400px,0,0); /* Updated the values */
-    /* Don't forget the vendor prefixes */
-}
 
 .top{
-	height: 53vw;
+	height: 30vw;
 	position: relative;
 }
 
@@ -75,7 +61,7 @@ html, body{
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 53vw;
+	height: 30vw;
 	pointer-events: none;
 
 }
@@ -249,6 +235,3 @@ a{
 		top: 42%;
 	}
 }
-
-
-@import 'pushy';
