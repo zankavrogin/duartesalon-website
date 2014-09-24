@@ -29,33 +29,39 @@
       .column
         .cover
           %span +
-        = link_to image_tag( 'home-bio.jpg'), '/', :class => 'Duarte_logo'
-        %h2 + BIO
+        = link_to image_tag( 'home-bio.jpg'), '/bio', :class => 'Duarte_logo'
+        %h2 
+          = link_to ' BIO', '/bio'
       .column
         .cover
           %span +
-        = link_to image_tag( 'home-services.jpg'), '/', :class => 'Duarte_logo'
-        %h2 + SERVICES
+        = link_to image_tag( 'home-services.jpg'), '/services', :class => 'Duarte_logo'
+        %h2
+          = link_to ' SERVICES', '/services'
       .column
         .cover
           %span +
-        = link_to image_tag( 'home-hair-institute.jpg'), '/', :class => 'Duarte_logo'
-        %h2 +HAIR INSTITUTE
+        = link_to image_tag( 'home-hair-institute.jpg'), '/hair_institute', :class => 'Duarte_logo'
+        %h2
+          = link_to ' HAIR INSTITUTE', '/hair_institute'
       .column
         .cover.bottom
           %span +
-        = link_to image_tag( 'home-salon.jpg'), '/', :class => 'Duarte_logo'
-        %h2 +LOCATION
+        = link_to image_tag( 'home-salon.jpg'), '/location', :class => 'Duarte_logo'
+        %h2
+          = link_to ' LOCATION', 'location'
       .column
         .cover.bottom
           %span +
-        = link_to image_tag( 'home-jobs.jpg'), '/', :class => 'Duarte_logo'
-        %h2 + JOB OPPORTUNITIES
+        = link_to image_tag( 'home-jobs.jpg'), '/job_opportunities', :class => 'Duarte_logo'
+        %h2
+          = link_to ' JOB OPPORTUNITIES', '/job_opportunities'
       .column
         .cover.bottom
           %span +
-        = link_to image_tag( 'home-contact.jpg'), '/', :class => 'Duarte_logo'
-        %h2 + CONTACT
+        = link_to image_tag( 'home-contact.jpg'), '/contact_us', :class => 'Duarte_logo'
+        %h2
+          = link_to ' CONTACT', '/contact_us'
   -else
     -if current_page.data.hero == true
       .image
@@ -71,6 +77,18 @@
     %p Duarte Salon 2014 - All Rights Reserved
 
 :javascript
+    $(function() {
+         var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/"));
+         $("ul.nav li a.nav").each(function(){
+            if($(this).attr("href") == pgurl || $(this).attr("href") == '') {
+              $(this).addClass("active"); 
+            }
+            if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+              $(this).addClass("active");
+            }
+         })
+    });
+      
     $('document').ready( function() {
       $('.top').click(function (){
         $('.top').toggleClass( 'demo' );

@@ -3,6 +3,7 @@
 @import "variables";
 @import "nav"; 
 
+
 h1,h2,h3{
 	font-family: Montserrat, sans serif;
 	font-weight: 400;
@@ -166,7 +167,7 @@ a{
 .homepage{
 	&:hover{
 		cursor: pointer;
-		opacity: .9;
+		//opacity: .9;
 	}
 }
 
@@ -253,6 +254,7 @@ a,strong{
 
 .column{
 	@include span-columns(4);
+	width: 33%;
 	padding: 0 5px;
 	@include omega;
 	height: auto;
@@ -261,6 +263,11 @@ a,strong{
 
 	h2{
 		font-size: 16px;
+
+		&:before{
+			content:"+";
+			font-size: 14px;
+		}
 	}
 	img{
 		width: 100%;
@@ -273,13 +280,16 @@ a,strong{
 		.cover{
 			display: block;
 		}
+		a{
+			text-decoration: none;
+		}
 	}
 }
 
 .cover{
 	display: none;
 	background-color: #ff2814;
-	height: 428px;
+	height: 468px;
 	width: 97.4%;
 	position: absolute;
 	top: 0;
@@ -293,7 +303,7 @@ a,strong{
 	}
 }
 .bottom{
-	height: 259px;
+	height: 284px;
 	span{
 		top: 46%;
 		left: 50%;

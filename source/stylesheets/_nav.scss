@@ -1,4 +1,5 @@
 nav{
+	@include outer-container;
 	font-size: 14px;
 	line-height: 25px;
 	margin-bottom: 20px;
@@ -40,6 +41,11 @@ nav{
 
 			&:hover{
 				color: rgba(0, 0, 0, 0.5);
+			}
+			&:after{
+				//content: "^";
+				position: absolute;
+				right: 50%;
 			}
 		}
 	}
