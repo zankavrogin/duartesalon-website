@@ -4,7 +4,7 @@
   %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
   %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :title => "style", :type => "text/css"}
   %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
-  %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pinyon+Script", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "http://fonts.googleapis.com/css?family=Open+sans:300,400,700|Montserrat", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
   %script{:src => "javascripts/all.js"}
   %script{:src => "/javascripts/modernizr.js"}
@@ -12,26 +12,65 @@
   =csrf_meta_tags
 
 %body{:class => page_classes}
-  = partial "layouts/elements/sidebar"
+  = partial "layouts/elements/nav"
   #container 
-    %div.top
-      .hero
-        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); " }
   -if current_page.data.home == true
+    .top.homepage
+      .hero
+        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); background-position-y: 0px;" }
+    .home
+      .content
+        .container
+          =yield
+          
     .column-container
+      %h1 
+        = current_year
       .column
-        = link_to image_tag( 'bio.jpg'), '/', :class => 'Duarte_logo'
+        .cover
+          %span +
+        = link_to image_tag( 'home-bio.jpg'), '/', :class => 'Duarte_logo'
+        %h2 + BIO
       .column
-        = link_to image_tag( 'wind.jpg'), '/', :class => 'Duarte_logo'
+        .cover
+          %span +
+        = link_to image_tag( 'home-services.jpg'), '/', :class => 'Duarte_logo'
+        %h2 + SERVICES
       .column
-        = link_to image_tag( 'woman.jpg'), '/', :class => 'Duarte_logo'
+        .cover
+          %span +
+        = link_to image_tag( 'home-hair-institute.jpg'), '/', :class => 'Duarte_logo'
+        %h2 +HAIR INSTITUTE
       .column
-        = link_to image_tag( 'contact.jpg'), '/', :class => 'Duarte_logo'
+        .cover.bottom
+          %span +
+        = link_to image_tag( 'home-salon.jpg'), '/', :class => 'Duarte_logo'
+        %h2 +LOCATION
       .column
-        = link_to image_tag( 'salon.jpg'), '/', :class => 'Duarte_logo'
+        .cover.bottom
+          %span +
+        = link_to image_tag( 'home-jobs.jpg'), '/', :class => 'Duarte_logo'
+        %h2 + JOB OPPORTUNITIES
       .column
-        = link_to image_tag( 'unknown.jpg'), '/', :class => 'Duarte_logo'
+        .cover.bottom
+          %span +
+        = link_to image_tag( 'home-contact.jpg'), '/', :class => 'Duarte_logo'
+        %h2 + CONTACT
+  -else
+    -if current_page.data.hero == true
+      .image
+        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); background-position-y: 0px;" }
     .content
       .container
         =yield
 
+  %footer
+    %p Duarte Salon 2014 - All Rights Reserved
+
+:javascript
+    $('document').ready( function() {
+      $('.top').click(function (){
+        $('.top').toggleClass( 'demo' );
+        $('.home').toggleClass( 'demo-serve' );
+      })
+    } );

@@ -22,5 +22,9 @@ helpers do
 
     properties
   end
+
+  def current_year
+    " #{Date.today.year}"
+  end
  
 end
