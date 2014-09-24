@@ -52,7 +52,6 @@ html, body{
 
 .hero{
 	position: absolute;
-	background: #191918;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -69,18 +68,6 @@ html, body{
 	height: 100%;
 }
  
-.header{
-	@include row(); 
-	@include shift(2);
-	margin-top:50px;
-	
-	@media #{$mq-mobile}{
-		@include shift(0);
-		img{
-			width: 100%;
-		}
-	}
-}
 .content{
 	@include outer-container;
   	max-width: 60em; 
@@ -103,30 +90,9 @@ html, body{
 
 }
 .container:after {
-		display: block;
-	}
-.image-container{
-	float: left;
-	margin-right: 25px;
-	width: 54%;
-	padding-top: 18px;
-	img{
-		position: relative;
-		width: 100%; 
-	}
-	.contact-image{
-		width: 49%;
-	}
-	@media #{$mq-tablet}{
-		float: none; 
-		width: 93%;
-	}
-	@media #{$mq-mobile}{
-		margin: 15px 0;
-		width: 100%;
- 
-	}
+	display: block;
 }
+
 .image-container-small{
 	@extend .image-container;
 	text-align: center;
@@ -194,11 +160,14 @@ a{
 
 .center, .video{
 	text-align: center;
+	margin-top: 30px;
 }
 
 .homepage{
-	cursor: pointer;
-	//transition: .25s width;
+	&:hover{
+		cursor: pointer;
+		opacity: .9;
+	}
 }
 
 .home{
