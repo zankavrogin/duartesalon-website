@@ -80,17 +80,17 @@
     $('document').ready( function() {
       $('.home-content').click(function (){
         $('.home-content').toggleClass( 'show-content' );
+      });
+
+      $(window).on('resize', function (){
+        $('.cover-wrap').height($('.column img').height());
+        $('.cover-wrap.bottom').height($('.column.bottom img').height());
+      });
+
     });
 
-    $(window).on('resize', function (){
-      $('.cover-wrap').height($('.column img').height());
-      $('.cover-wrap.bottom').height($('.column.bottom img').height());
-    });
-
-    if ($(window).width() < 1140) {
-      setTimeout(function () {
+    $(window).load(function() {
+      if ($(window).width() < 1140) {
         $(window).trigger('resize');
-      }, 10);
-    }
-
+      }
     });
