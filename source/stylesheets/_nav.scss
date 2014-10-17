@@ -47,11 +47,11 @@ nav{
 			&:hover{
 				color: rgba(0, 0, 0, 0.5);
 			}
-			&:after{
-				//content: "^";
-				position: absolute;
-				right: 50%;
-			}
+		}
+	}
+	.active{
+		a{
+		color: rgba(0, 0, 0, 0.5);
 		}
 	}
 	@media #{$mq-mobile}{

@@ -13,18 +13,11 @@ configure :build do
 end
 
 helpers do
-  def menu_item(path)
-    properties = {:href => "/#{path}", :class => "item"}
-
-    if current_page.path == path
-      properties[:class] = "active item"
-    end
-
-    properties
+  def nav_active(path)
+    current_page.path == path ? {:class => "active"} : {}
   end
 
   def current_year
     " #{Date.today.year}"
   end
- 
 end

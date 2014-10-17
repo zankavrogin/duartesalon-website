@@ -203,10 +203,12 @@ a{
 		.image{
 			width: 63%;
 			height: 80vw;
+			//max-height: 1000px;
 		}
 		.image-head{
 			background-position-x: 0px !important;
 			height: 80vw;
+			max-height: 1000px;
 		}
 		.content{
 			padding-left: 20px;
