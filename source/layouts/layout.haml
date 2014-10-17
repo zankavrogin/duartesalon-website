@@ -4,7 +4,7 @@
   %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
   %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :title => "style", :type => "text/css"}
   %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
-  %link{:href => "http://fonts.googleapis.com/css?family=Open+sans:300,400,700|Montserrat", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat", :rel => "stylesheet", :type => "text/css"}
   %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
   %script{:src => "javascripts/all.js"}
   %script{:src => "/javascripts/modernizr.js"}
@@ -13,85 +13,84 @@
 
 %body{:class => page_classes}
   = partial "layouts/elements/nav"
-  #container 
+  #container
   -if current_page.data.home == true
-    .top.homepage
-      .hero
-        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); background-position-y: 0px;" }
-    .home
-      .content
-        .container
-          =yield
-          
+    %a{ :href => '/hair_institute'}
+      .top.homepage
+        .hero
+          .image-head{ :style => "background-image: url('/images/hair-institute2.jpg'); background-position-y: 0px; height: 40vw" }
     .column-container
-      %h1 
-        = current_year
+      %a.hair-intitute-link{ :href => '/hair_institute'}
+        %h1
+          Hair Institute
+      .column.home-content
+        .cover-wrap
+          .text
+            =yield
+          .cover
+            %span READ
+        =image_tag 'home-hair-institute.jpg'
+        %h2 SALON
       .column
-        .cover
-          %span +
+        .cover-wrap
+          .cover
+            %span READ
         = link_to image_tag( 'home-bio.jpg'), '/bio', :class => 'Duarte_logo'
-        %h2 
+        %h2
           = link_to ' BIO', '/bio'
       .column
-        .cover
-          %span +
+        .cover-wrap
+          .cover
+            %span READ
         = link_to image_tag( 'home-services.jpg'), '/services', :class => 'Duarte_logo'
         %h2
           = link_to ' SERVICES', '/services'
-      .column
-        .cover
-          %span +
-        = link_to image_tag( 'home-hair-institute.jpg'), '/hair_institute', :class => 'Duarte_logo'
-        %h2
-          = link_to ' HAIR INSTITUTE', '/hair_institute'
-      .column
-        .cover.bottom
-          %span +
+      .column.bottom
+        .cover-wrap.bottom
+          .cover.bottom
+            %span READ
         = link_to image_tag( 'home-salon.jpg'), '/location', :class => 'Duarte_logo'
         %h2
           = link_to ' LOCATION', 'location'
-      .column
-        .cover.bottom
-          %span +
+      .column.bottom
+        .cover-wrap.bottom
+          .cover.bottom
+            %span READ
         = link_to image_tag( 'home-jobs.jpg'), '/job_opportunities', :class => 'Duarte_logo'
         %h2
           = link_to ' JOB OPPORTUNITIES', '/job_opportunities'
-      .column
-        .cover.bottom
-          %span +
+      .column.bottom
+        .cover-wrap.bottom
+          .cover.bottom
+            %span READ
         = link_to image_tag( 'home-contact.jpg'), '/contact_us', :class => 'Duarte_logo'
         %h2
           = link_to ' CONTACT', '/contact_us'
   -else
-    -if current_page.data.hero == true
-      .image
-        .image-head{ :style => "background-image: url('/images/#{current_page.data.image}.jpg'); background-position-y: 0px;" }
-        -if current_page.data.video == true
-          .video
-            <iframe class="" src="//player.vimeo.com/video/92828313" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-    .content
-      .container
-        =yield
+    =yield
 
   %footer
     %p Duarte Salon 2014 - All Rights Reserved
 
 :javascript
-    $(function() {
-         var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/"));
-         $("ul.nav li a.nav").each(function(){
-            if($(this).attr("href") == pgurl || $(this).attr("href") == '') {
-              $(this).addClass("active"); 
-            }
-            if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
-              $(this).addClass("active");
-            }
-         })
+    $("#nav-menu").click(function() {
+      $(".nav").toggleClass("nav-show");
     });
-      
+
     $('document').ready( function() {
-      $('.top').click(function (){
-        $('.top').toggleClass( 'demo' );
-        $('.home').toggleClass( 'demo-serve' );
-      })
-    } );
+      $('.home-content').click(function (){
+        $('.home-content').toggleClass( 'show-content' );
+    });
+
+    $(window).on('resize', function (){
+      $('.cover-wrap').height($('.column img').height());
+      $('.cover-wrap.bottom').height($('.column.bottom img').height());
+    });
+
+    if ($(window).width() < 1140) {
+      setTimeout(function () {
+        $(window).trigger('resize');
+      }, 10);
+    }
+
+    });

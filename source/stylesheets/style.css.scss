@@ -1,7 +1,7 @@
 @import 'bourbon';
 @import "neat";
 @import "variables";
-@import "nav"; 
+@import "nav";
 
 
 h1,h2,h3{
@@ -9,9 +9,18 @@ h1,h2,h3{
 	font-weight: 400;
 }
 
+h1{
+	font-size: 38px;
+	line-height: 45px;
+}
+h2{
+	font-size: 32px;
+	line-height: 40px;
+}
+
 html, body{
-	overflow-x: hidden;  
-    -webkit-tap-highlight-color: rgba(0,0,0,0);  
+	overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     height: 100%;
 	margin: 0;
 	font-family:  Montserrat, sans serif;
@@ -21,33 +30,8 @@ html, body{
 	height: 40vw;
 	position: relative;
 	width: 100%;
-}
-
-.title{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	width: 50%;
-	z-index: 1;
-	text-align: center;
-
-	h1{
-		margin: 0;
-		font:400 100px/80px amazon, Pinyon Script, open sans, sans serif; 
-		opacity: .9;
-		color: white;
-		text-decoration: none;
-		padding: 0 10px;
-
-		@media #{$mq-mobile}{
-			font-size: 65px;
-		}
-	}
-
-	h1 span.black{
-		color: black;
+	@media #{$mq-mobile}{
+		//margin-top: 250px;
 	}
 }
 
@@ -67,62 +51,47 @@ html, body{
 	-o-background-size: cover;
 	background-size: cover;
 	height: 100%;
+	height: 30vw;
 }
  
 .content{
 	@include outer-container;
-  	max-width: 60em; 
 }
 .container{ 
-	
 	@include row();
 	@include span-columns(12);
 	float: left;
 	position: relative;
-	font: 300 12px/18px open sans, sans-serif;
+	font: 300 16px/23px open sans, sans-serif;
 
-	padding: 14px 0px 25px 0px;
-	
+	padding: 0px 0px 25px 0px;
+
+	p:first-child{
+		margin-top: 0;
+	}
 	@media #{$mq-mobile}{
 		@include span-columns(12);
 		font-size: 18px;
-		padding: 0 15px; 
+		padding: 15px 0px 0; 
 	}
 
 }
-.container:after {
-	display: block;
-}
 
-.image-container-small{
-	@extend .image-container;
-	text-align: center;
-
-	@media #{$mq-desktop}{
-		width: 40%;
-	}
-	img{
-		@media #{$mq-tablet-mobile}{
-			width: 80%;
-		}
-	}
-}
 .media-container{
 	text-align: center;
-	margin-top: 76px;
+	margin-top: 31px;
 	margin-bottom: 21px;
 }
+
 .text-wrap{
 	@include span-columns(3);
 	@include shift(1);
 	margin-left: 15px;
 	.container{
 		padding-bottom: 0;
-		margin-top: 50px;
 	}
 	@media #{$mq-tablet-mobile}{
 		@include span-columns(12);
-		@include shift(2);
 		.container{
 			@include span-columns(5);
 		}
@@ -133,14 +102,11 @@ a{
 }
 .service{
 	float: left;
-
-	@media only screen and (max-width: 841px){
-		margin-top: -24px;
-	}
 }
 
 .services-container{
 	@extend .left;
+	height: 600px;
 }
 
 .prices{
@@ -152,31 +118,25 @@ a{
 		float: left;
 	}
 }
-.right{
-	@media #{$mq-desktop}{
-		float: right;
-		width: 42%;
-	}
-}
 
 .center, .video{
 	text-align: center;
 	margin-top: 30px;
+	@media #{$mq-mobile}{
+		display: none;
+	}
 }
 
 .homepage{
+	margin-bottom: 15px;
+	@media #{$mq-mobile}{
+		float: left;
+	}
 	&:hover{
 		cursor: pointer;
-		//opacity: .9;
 	}
 }
 
-.home{
-	display: none;
-	.container{
-		padding: 14px 20px 0px;
-	}
-}
 .demo{
 	@extend .top;
 	float: right;
@@ -192,49 +152,75 @@ a{
 	@extend .top;
 	float: right;
 	width: 50%;
-	margin-top: 25px;
-	padding-right: 30px;
+	@media #{$mq-mobile}{
+		width: 100%;
+		.image-head{
+			height: 100%;
+		}
+	}
 }
 
 .demo-serve{
 	float: left;
-	width: 49%;
+	width: 45%;
 	display: block;
+	@media #{$mq-mobile}{
+		width: 100%;
+	}
 }
 
 .services {
-	.image-head{
-		background-position-x: -345px;
+	.image, .image-head{
+		height: 34.5vw;
+		max-height: 420px;
+		@media #{$mq-desktop}{
+		}
+		@media #{$mq-mobile}{
+			height: 41vw;
+		}
 	}
 	.container{
 		@extend .demo-serve;
 	}
 }
 
-.bio, .contact_us, .job_opportunities {
-	.image-head{
-		height: 86%;
+.bio,  .contact_us, .job_opportunities {
+	.image, .image-head{
+		height: 34.5vw;
+		max-height: 420px;
+		@media #{$mq-mobile}{
+			height: 67.6vw;;
+			margin-top: 0px;
+		}
 	}
 	.content{
 		@extend .demo-serve;
-		padding-left: 20px;
 	}
 }
 
-.hair_institute  {
-	.image{
-		width: 63%;
+.hair_institute {
+	@media #{$mq-desktop}{
+		.image{
+			width: 63%;
+			height: 80vw;
+		}
+		.image-head{
+			background-position-x: 0px !important;
+			height: 80vw;
+		}
+		.content{
+			padding-left: 20px;
+			width: 33%;
+			float: left;
+		}
 	}
-	image-head{
-		background-position-x: 0px;
-	}
-	.content{		
-		padding-left: 20px;
-		width: 33%;
-		float: left;
+	@media #{$mq-mobile}{
+		.image, .image-head{
+			height: 600px;
+			background-position-x: 0px !important;
+		}
 	}
 }
-
 
 a,strong{
 	font-weight: 400;
@@ -250,6 +236,10 @@ a,strong{
 	clear: both;
 	margin-top: 30px;
 	margin-bottom: 200px;
+	padding: 0 15px;
+	min-height: 100%;
+    //margin-bottom: -94px;
+    //padding-bottom: 94px;
 }
 
 .column{
@@ -260,6 +250,14 @@ a,strong{
 	height: auto;
 	overflow: hidden;
 	position: relative;
+	@media #{$mq-mobile}{
+		@include span-columns(6);
+		@include omega;
+	}
+	@media #{$mq-mobile-small}{
+		@include span-columns(12);
+		@include omega;
+	}
 
 	h2{
 		font-size: 16px;
@@ -286,27 +284,39 @@ a,strong{
 	}
 }
 
+.cover-wrap{
+	height: 86.7%;
+	width: 97%;
+	position: absolute;
+	overflow: hidden;
+	@media #{$mq-mobile}{
+		height: 82.3%;
+	}
+}
+
+.cover-wrap.bottom{
+	height: 79.6%;
+}
 .cover{
 	display: none;
 	background-color: #ff2814;
-	height: 468px;
-	width: 97.4%;
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	top: 0;
 
 	span{
 		top: 47%;
-		left: 50%;
+		left: 43%;
 		position: relative;
 		color: white;
 		font-weight: 600;
 	}
 }
 .bottom{
-	height: 284px;
 	span{
 		top: 46%;
-		left: 50%;
+		left: 43%;
 	}
 }
 
@@ -316,11 +326,66 @@ footer{
 	clear: both;
 
 	p{
+		@include outer-container;
 		font-family: montserrat;
 		font-weight: 400;
 		font-size: 12px;
 		color: white;
 		line-height: 95px;
-		padding-left: 20px;
+		padding-left: 15px;
+		margin-bottom: 0;
 	}
 }
+
+.hide{
+	display: none;
+}
+
+.show{
+	display:block;
+	margin-bottom: -300px;
+}
+
+.index .show {
+	.image{
+		cursor: pointer;
+	}
+	.container{
+		width: 45%;
+	}
+}
+
+.text{
+	display: none;
+}
+
+.show-content{
+	@media #{$mq-desktop}{
+		padding-bottom: 330px;
+	}
+
+	.cover-wrap{
+		overflow: visible;
+		height: 100%;
+		position: relative;
+	}
+	.cover, .cover:hover{
+		opacity: 0;
+	}
+	.text{
+		display: block;
+	}
+	.container{
+		padding-bottom: 0;
+		@media #{$mq-mobile}{
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+	img{
+		display: none;
+	}
+}
+.hair-intitute-link:hover{
+	text-decoration: none;
+	}

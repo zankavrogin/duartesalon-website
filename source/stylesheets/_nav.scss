@@ -2,7 +2,7 @@ nav{
 	@include outer-container;
 	font-size: 14px;
 	line-height: 25px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	position: relative;
 	text-align: right;
 	top: 10px;
@@ -18,6 +18,11 @@ nav{
 		position: relative;
 		top: -14px;
 		padding: 0 10px;
+
+		@media #{$mq-mobile}{
+			width: 53%;
+			margin-top: 20px;
+		}
 	}
 }
 .nav{
@@ -50,9 +55,13 @@ nav{
 		}
 	}
 	@media #{$mq-mobile}{
-			
-
-		margin-top: 0;
+	font: 400 16px/30px Montserrat, sans serif;
+	display: none;
+		li{
+			width: 49%;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			top: 0;
+		}
 	}
 }
 ul.sub-nav{
@@ -68,7 +77,7 @@ ul.sub-nav{
 
 	@media #{$mq-mobile}{
 		margin-top: 35px;
-		
+
 		li{
 			width: 47%;
 		}
@@ -84,3 +93,57 @@ ul.treatments{
 		content: "\2666 \0020";
 	}
 }
+
+#nav-menu{
+  width: 50px;
+  margin-top: 10px;
+}
+
+.line {
+  height: 6px;
+}
+
+.mobile-menu {
+  text-align: right;
+  display: none;
+  margin-right: em(10);
+
+  @media #{$mq-mobile}{
+    display: block;
+  }
+
+  a {
+    //background: black;
+    border-radius: em(13);
+    padding: em(10) em(12);
+    margin: em(5);
+    display: inline-block;
+
+    &:hover {
+      //background: white;
+      cursor: pointer;
+
+      .line{
+        background: black;
+      }
+    }
+  }
+  .line {
+    margin: em(5) 0 em(5);
+    background: black;
+  }
+}
+.mobile-menu.home{
+  display: none;
+
+  @media #{$mq-mobile}{
+    display: block;
+  }
+}
+
+.nav-show {
+  display: block !important;
+  margin-bottom: -9px;
+}
+
+

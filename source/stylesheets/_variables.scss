@@ -41,7 +41,8 @@ $mobile-portrait:           "screen and (max-width: 30em) and (orientation : por
 $mobile-landscape:          "screen and (max-width: 30em) and (orientation : landscape)";
 
 
-$mq-desktop: "only screen and (min-width: 841px)"; 
-$mq-mobile: "only screen and (max-width: 641px) and (min-width: 1px)";
+$mq-desktop: "only screen and (min-width: 769px)"; 
+$mq-mobile: "only screen and (max-width: 768px) and (min-width: 1px)";
+$mq-mobile-small: "only screen and (max-width: 580px) and (min-width: 1px)";
 $mq-tablet: "only screen and (max-width: 840px) and (min-width: 642px)";
 $mq-tablet-mobile: "only screen and (max-width : 840px) and (min-width : 1px)";
