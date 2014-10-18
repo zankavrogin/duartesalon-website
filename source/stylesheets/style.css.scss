@@ -90,10 +90,10 @@ html, body{
 	.container{
 		padding-bottom: 0;
 	}
-	@media #{$mq-tablet-mobile}{
+	@media #{$mq-mobile}{
 		@include span-columns(12);
 		.container{
-			@include span-columns(5);
+			@include span-columns(12);
 		}
 	}
 }
@@ -107,6 +107,9 @@ a{
 .services-container{
 	@extend .left;
 	height: 600px;
+	@media #{$mq-mobile-small}{
+		font-size: 12px;
+	}
 }
 
 .prices{
